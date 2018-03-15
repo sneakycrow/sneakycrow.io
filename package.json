@@ -1,0 +1,50 @@
+{
+  "name": "sneakycrow.io",
+  "version": "1.0.0",
+  "description": "Personal website repository for sneakycrow.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production",
+    "start:dev": "webpack-dev-server --hot --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sneakycrow/sneakycrow.io.git"
+  },
+  "author": "Zachary E Sohovich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sneakycrow/sneakycrow.io/issues"
+  },
+  "homepage": "https://github.com/sneakycrow/sneakycrow.io#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^4.0.0",
+    "webpack": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "css-loader": "^0.28.10",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.0.6",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
+  }
+}
