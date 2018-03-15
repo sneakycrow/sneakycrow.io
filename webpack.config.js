@@ -18,14 +18,20 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
-          use: [{
-              loader: "css-loader"
-          }, {
-              loader: "sass-loader"
-          }],
-          // use style-loader in development
-          fallback: "style-loader"
-      })
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                sourceMap: true,
+                importLoaders: 2,
+                localIdentName: '[name]__[local]__[hash:base64:5]'
+              }
+            },
+            'sass-loader'
+          ]
+        })
       }
     ],
   },
@@ -33,6 +39,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'SneakyCrow.io',
       template: './src/index.html'
-    })
+    }),
+    new ExtractTextPlugin({ filename: 'app.bundle.css', allChunks: true }),
   ]
 };
