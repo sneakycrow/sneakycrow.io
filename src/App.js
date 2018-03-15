@@ -1,7 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import styles from './App.scss';
+import { Section } from 'bloomer';
 
-const App = () => <div className={styles.hello}>Hello World</div>
+const App = () => <Section>Hello World</Section>
 
 export default hot(module)(App);
