@@ -19,5 +19,5 @@ deploy:
   provider: script
   script: .travis/deploy.sh
   on:
-    - all_branches: true
+    all_branches: true
   
