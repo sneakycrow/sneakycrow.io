@@ -5,7 +5,18 @@
     "node": true
   },
   "plugins": [
-    "react"
+    "react",
+    "prettier",
+    "html"
   ],
-  "extends": ["airbnb-base", "eslint:recommended", "plugin:react/recommended"]
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  },
+  "extends": ["airbnb", "eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"]
 }

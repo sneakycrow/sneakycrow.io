@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+- stable
+cache:
+  directories:
+  - node_modules
+addons:
+  ssh_known_hosts: sneakycrow.io
+script:
+- npm run lint
+- npm run build
+before_install:
+- openssl aes-256-cbc -K $encrypted_d20951817539_key -iv $encrypted_d20951817539_iv
+  -in travis_rsa.enc -out travis_rsa -d
+install:
+  - npm install
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: .travis/deploy.sh
+  on:
+    - all_branches: true
+  
