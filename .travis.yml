@@ -24,5 +24,3 @@ deploy:
   script: rsync $TRAVIS_BUILD_DIR/dist/* ada@159.65.165.38:/var/www/html
   on:
     branch: prod
-
-    rsync --quiet ./dist ada@159.65.165.38:/var/www/html
