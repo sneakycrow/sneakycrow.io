@@ -21,8 +21,6 @@ addons:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync $TRAVIS_BUILD_DIR/dist/* ada@159.65.165.38:/var/www/html
+  script: rsync -avP ./dist/* ada@159.65.165.38:/var/www/html/
   on:
     branch: prod
-
-    rsync --quiet ./dist ada@159.65.165.38:/var/www/html
