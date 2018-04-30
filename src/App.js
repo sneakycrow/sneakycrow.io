@@ -1,10 +1,8 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import Bio from './components/Bio';
 import style from './App.scss';
 
 const App = () => {
-  const aboutMe = 'This is where a biography will go';
   return (
     <div className={style.container}>
       <div className={style.logo}>
@@ -27,7 +25,6 @@ const App = () => {
           <i className="fab fa-github" />
         </a>
       </div>
-      <Bio description={aboutMe} />
     </div>
   );
 };
