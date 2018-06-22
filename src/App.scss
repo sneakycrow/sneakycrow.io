@@ -1,16 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
 
-$green: #29B158;
-$darkgrey: #1E2326;
+$green: #29b158;
+$darkgrey: #1e2326;
+$grey: #606060;
 
 $background: $darkgrey;
 $color: white;
 
+$font-size: 16px;
 $spacing-sm: 18px;
 $spacing-md: 28px;
 
+* {
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+}
+
 body {
   background-color: $darkgrey;
+  font-size: $font-size;
 }
 
 .container {
@@ -21,8 +29,6 @@ body {
   align-items: center;
   justify-content: center;
   color: $color;
-  font-family: 'Noto Sans', sans-serif;
-  text-transform: uppercase;
   text-align: center;
   a {
     color: $green;
@@ -44,30 +50,35 @@ body {
     }
   }
   .title {
-    font-size: 50px;
-    position: relative;
-    background: $background;
-    &:before, &:after {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      clip: rect(0, 0, 0, 0); 
-    }
-    &::before {
-      left: -2px;
-      animation: glitch-anim 1s infinite linear alternate-reverse;
-    }
-    &::after {
-      left: 2px;
-      animation: glitch-anim 1s infinite linear alternate-reverse;
+    text-transform: uppercase;
+    .subtitle {
+      font-size: 2em;
+      position: relative;
+      background: $background;
+      &:before,
+      &:after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip: rect(0, 0, 0, 0);
+      }
+      &::before {
+        left: -2px;
+        animation: glitch-anim 1s infinite linear alternate-reverse;
+      }
+      &::after {
+        left: 2px;
+        animation: glitch-anim 1s infinite linear alternate-reverse;
+      }
     }
   }
 
   .linksContainer {
     display: flex;
+    margin-top: $spacing-sm;
     a {
       display: flex;
       height: $spacing-md;
@@ -75,6 +86,10 @@ body {
       align-items: center;
       justify-content: center;
     }
+  }
+  .secondary {
+    color: $grey;
+    font-size: 0.85em;
   }
 }
 

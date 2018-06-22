@@ -11,9 +11,13 @@ const App = () => {
           alt="Sneaky Crow"
         />
       </div>
-      <div className={style.title} data-text="Sneaky Crow">
+      <div className={style.title}>
         Sneaky Crow
+        <p className={style.subtitle} data-text="Software Engineer">
+          Software Engineer
+        </p>
       </div>
+      <p className={style.secondary}>Javascript Rust Python</p>
       <div className={style.linksContainer}>
         <a href="mailto:zach@sneakycrow.io">
           <i className="fas fa-paper-plane" />
