@@ -4,7 +4,9 @@
   "description": "Personal repository for sneakycrow.io",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html",
+    "lint": "eslint --ext .js src/"
   },
   "repository": {
     "type": "git",
