@@ -1,0 +1,19 @@
+{
+  "name": "sneakycrow",
+  "version": "1.1.0",
+  "description": "Personal repository for sneakycrow.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sneakycrow/sneakycrow.io.git"
+  },
+  "author": "Zachary E Sohovich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sneakycrow/sneakycrow.io/issues"
+  },
+  "homepage": "https://github.com/sneakycrow/sneakycrow.io#readme"
+}
