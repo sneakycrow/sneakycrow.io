@@ -59,6 +59,7 @@ typings/
 
 # Build directories
 dist/
+.cache/
 
 # Travis Encrypted files
 travis_rsa
