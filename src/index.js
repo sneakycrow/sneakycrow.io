@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { injectGlobal } from 'emotion';
-import { sizes } from 'variables';
+import { sizes } from 'assets/variables';
 import App from './components/App';
 
 injectGlobal`

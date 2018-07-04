@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'react-emotion';
 import Avatar from 'components/Avatar';
-import { pallette } from 'variables';
+import AdaDadHat from 'assets/svg/AdaDadHat';
+import { pallette } from 'assets/variables';
 
 const { dark } = pallette;
 
@@ -20,6 +21,7 @@ const App = () => (
   <Container>
     Software Engineer
     <Avatar imageSrc="https://crows-nest.nyc3.digitaloceanspaces.com/assets/images/ada.png" />
+    <AdaDadHat />
   </Container>
 );
 

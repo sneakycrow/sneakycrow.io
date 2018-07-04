@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css as emotion } from 'react-emotion';
-import { pallette } from 'variables';
+import { pallette } from 'assets/variables';
 
 const ImageBase = emotion`
   width: 100px;
