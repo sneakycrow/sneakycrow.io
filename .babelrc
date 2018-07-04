@@ -5,7 +5,7 @@
     ["module-resolver", {
       "root": ["./src"],
       "alias": {
-        "variables": "./src/assets/variables.js",
+        "assets": "./src/assets",
         "components": "./src/components"
       }
     }]
