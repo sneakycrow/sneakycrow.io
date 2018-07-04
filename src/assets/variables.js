@@ -22,3 +22,7 @@ export const spacing = {
   lg: '48px',
   xlg: '96px'
 };
+
+export const sizes = {
+  font: '1.5em'
+};
