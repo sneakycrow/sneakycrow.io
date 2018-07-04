@@ -12,15 +12,13 @@ const Container = styled('div')`
 
 const NavLink = styled('a')`
   margin: 0 ${spacing.xs};
-  padding: ${spacing.xs};
+  padding: 0 ${spacing.xs};
   background-color: ${pallette.dark.base};
   color: ${pallette.dark.primary};
-  border-bottom: 2px solid transparent;
   transition: all 0.15s ease-in-out;
   &:hover {
     background-color: ${transparentize(0.7, pallette.dark.primary)};
     color: ${pallette.white};
-    border-color: ${pallette.dark.primary};
   }
 `;
 
