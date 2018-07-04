@@ -12,7 +12,9 @@ export const pallette = {
     base: '#1c1c1c', // dark gray
     variant1: '#daddd8', // light gray
     variant2: '#ecebe4' // white/light beige
-  }
+  },
+  white: '#FFFFFF',
+  black: '#000000'
 };
 
 export const spacing = {
@@ -24,5 +26,5 @@ export const spacing = {
 };
 
 export const sizes = {
-  font: '1.5em'
+  font: '1em'
 };
