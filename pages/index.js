@@ -1,4 +1,4 @@
-import { styled } from 'react-emotion';
+import styled from 'react-emotion';
 import { pallette } from '../assets/variables';
 
 const Container = styled('div')`

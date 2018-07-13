@@ -60,9 +60,8 @@ typings/
 # Build directories
 dist/
 .cache/
+.next/
+out/
 
 # Travis Encrypted files
 travis_rsa
-
-# build output
-.next/
