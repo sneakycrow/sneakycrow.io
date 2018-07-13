@@ -2,14 +2,18 @@ language: node_js
 node_js:
 - stable
 addons:
-  apt:
-    packages:
-    - sshpass
+  ssh_known_hosts: $PROD_HOST
 script:
 - npm run lint
 - npm run build
 - npm run export
-- sshpass -p $PROD_PASS scp -r -P $PROD_PORT ./out/ $PROD_USER@$PROD_HOST:$PROD_DIR
 before_install:
 - openssl aes-256-cbc -K $encrypted_9c339d1bc91f_key -iv $encrypted_9c339d1bc91f_iv
   -in deploy_rsa.enc -out deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/deploy_rsa
+- ssh-add /tmp/deploy_rsa
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/out $PROD_USER@$PROD_HOST:$PROD_DIR
