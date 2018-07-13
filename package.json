@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html",
+    "dev": "next",
     "lint": "eslint --ext .js src/"
   },
   "repository": {
@@ -30,8 +29,8 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.5",
-    "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-emotion": "^9.2.4",
+    "babel-plugin-module-resolver": "^3.1.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "eslint": "^5.0.1",
@@ -42,7 +41,6 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.1",
     "eslint-plugin-react": "^7.10.0",
-    "parcel-bundler": "^1.9.4",
     "prettier": "^1.13.7"
   }
 }
