@@ -63,3 +63,6 @@ dist/
 
 # Travis Encrypted files
 travis_rsa
+
+# build output
+.next/

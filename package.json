@@ -20,6 +20,7 @@
   "homepage": "https://github.com/sneakycrow/sneakycrow.io#readme",
   "dependencies": {
     "emotion": "^9.2.4",
+    "next": "^6.1.1",
     "polished": "^1.9.3",
     "prettier": "^1.13.7",
     "prop-types": "^15.6.2",
