@@ -3,3 +3,6 @@ node_js:
 - stable
 script:
 - npm run lint
+- npm run build
+- npm run export
+- rsync -avz -e 'ssh -p $PROD_PORT' ./out/ $PROD_USER@$PROD_HOST:/var/www/html/sneakycrow.io
