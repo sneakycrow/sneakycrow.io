@@ -1,9 +1,12 @@
 language: node_js
 node_js:
 - stable
+addons:
+  apt:
+    packages:
+    - sshpass
 script:
 - npm run lint
 - npm run build
 - npm run export
-- apt install sshpass
 - sshpass -p $PROD_PASS scp -r -P $PROD_PORT ./out/ $PROD_USER@$PROD_HOST:$PROD_DIR
