@@ -76,7 +76,7 @@ const Header = () => (
     <Navigation>
       <NavigationList>
         <li>
-          <AnchorLink href="#home">Home</AnchorLink>
+          <AnchorLink href="#home">Top</AnchorLink>
         </li>
         <li>
           <AnchorLink href="#about">About</AnchorLink>
