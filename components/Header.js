@@ -42,6 +42,17 @@ const NavigationList = styled('ul')`
   }
 `;
 
+const LogoLink = styled('a')`
+  opacity: 1;
+  border-radius: 50%;
+  padding: 0;
+  &:hover {
+    svg {
+      border: 5px solid ${pallette.green};
+    }
+  }
+`;
+
 const Logo = styled(AdaDadHat)`
   border-radius: 50%;
   stroke-width: 0;
@@ -49,11 +60,15 @@ const Logo = styled(AdaDadHat)`
   min-height: 50px;
   width: 50px;
   height: 50px;
+  padding: 0;
+  border: 5px solid transparent;
 `;
 
 const Header = () => (
   <NavigationBar>
-    <Logo />
+    <LogoLink href="https://www.sneakycrow.io/">
+      <Logo />
+    </LogoLink>
     <Navigation>
       <NavigationList>
         <li>
