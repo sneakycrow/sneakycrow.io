@@ -1,5 +1,6 @@
 import styled, { hydrate, injectGlobal, keyframes } from 'react-emotion';
 import { lighten } from 'polished';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Header from '../components/Header';
 import { pallette, spacing } from '../assets/variables';
 
@@ -121,7 +122,7 @@ const pulse = keyframes`
   }
 `;
 
-const ScrollDownContainer = styled('a')`
+const ScrollDownContainer = styled(AnchorLink)`
   position: absolute;
   bottom: 1em;
   display: flex;
@@ -144,6 +145,7 @@ const Home = () => (
         <Chevron />
       </ScrollDownContainer>
     </ContentContainer>
+    <ContentContainer id="about">Second Content</ContentContainer>
   </RootContainer>
 );
 
