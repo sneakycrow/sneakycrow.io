@@ -10,7 +10,7 @@ const NavigationBar = styled('div')`
   flex-wrap: wrap;
   align-items: top;
   justify-content: space-between;
-  padding: ${spacing.md};
+  padding-top: ${spacing.xs};
   position: fixed;
   width: 100%;
   top: 0;
@@ -34,7 +34,8 @@ const NavigationList = styled('ul')`
   flex-wrap: nowrap;
   li {
     display: inline-block;
-    margin: 0 ${spacing.xs};
+    *:first-child {
+    }
     a {
       padding: ${spacing.sm};
       display: block;
@@ -46,6 +47,9 @@ const LogoLink = styled('a')`
   opacity: 1;
   border-radius: 50%;
   padding: 0;
+  svg {
+    transition: border 0.2s ease-in-out;
+  }
   &:hover {
     svg {
       border: 5px solid ${pallette.green};

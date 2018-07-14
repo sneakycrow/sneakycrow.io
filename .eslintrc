@@ -5,7 +5,7 @@
     "node": true,
     "jest": true
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["prettier", "reacT"],
   "rules": {
     "prettier/prettier": [
       "error",

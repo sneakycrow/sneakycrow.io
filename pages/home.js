@@ -1,30 +1,19 @@
 import { Fragment } from 'react';
 import styled, { keyframes } from 'react-emotion';
-import { lighten } from 'polished';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Header from '../components/Header';
-import { pallette } from '../assets/variables';
+import Chevron from '../components/Chevron';
+import { pallette, spacing } from '../assets/variables';
 
 const ContentContainer = styled('div')`
   display: flex;
   height: 100vh;
-  width: 100vw;
+  width: auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-`;
-
-const Chevron = styled('span')`
-  border-style: solid;
-  border-width: 0.25em 0.25em 0 0;
-  content: '';
-  color: ${lighten(0.3, pallette.gray)};
-  display: inline-block;
-  height: 0.45em;
-  transform: rotate(135deg);
-  vertical-align: top;
-  width: 0.45em;
+  padding: ${spacing.sm};
 `;
 
 const pulse = keyframes`
@@ -48,8 +37,19 @@ const ScrollDownContainer = styled(AnchorLink)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: ${spacing.sm};
   span {
     animation: ${pulse} 1s infinite;
+  }
+`;
+
+const Bio = styled('p')`
+  max-width: 350px;
+  margin: ${spacing.md} 0;
+  line-height: ${spacing.md};
+  text-align: justify;
+  a {
+    padding: 0;
   }
 `;
 
@@ -58,7 +58,14 @@ const Home = () => (
     <Header />
     <ContentContainer id="home">
       <p>Hello World</p>
-      <small>Website in maintenance mode, come back soon!</small>
+      <small>Under Active Maintenance</small>
+      <Bio>
+        My name is Zachary E Sohovich. I love to program (and rebuild my website
+        often apparently). Right now, this site is being rebuilt with SSR React
+        (NextJS). I am currently a software engineer at
+        <a href="https://isolary.com"> isolary</a>. If you would like to get in
+        touch with me, email me!
+      </Bio>
       <a href="mailto:zach@sneakycrow.io">Email Me</a>
       <ScrollDownContainer href="#about">
         Scroll Down

@@ -76,6 +76,9 @@ injectGlobal`
       opacity: 1;
     }
   }
+  small {
+    font-size: 0.65em;
+  }
 `;
 
 const RootContainer = styled('div')`
