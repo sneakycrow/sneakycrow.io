@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
+    "babel-plugin-inline-react-svg": "^0.5.3",
     "eslint": "^5.0.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^2.9.0",

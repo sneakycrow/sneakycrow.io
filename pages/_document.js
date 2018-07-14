@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <title>With Emotion</title>
+          <title>Zachary Sohovich - Software Engineer</title>
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
         <body>
