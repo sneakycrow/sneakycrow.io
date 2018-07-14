@@ -127,10 +127,8 @@ const ScrollDownContainer = styled('a')`
   display: flex;
   flex-direction: column;
   align-items: center;
-  &:hover {
-    span {
-      animation: ${pulse} 1s infinite;
-    }
+  span {
+    animation: ${pulse} 1s infinite;
   }
 `;
 
