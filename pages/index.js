@@ -136,7 +136,7 @@ const ScrollDownContainer = styled(AnchorLink)`
 const Home = () => (
   <RootContainer>
     <Header />
-    <ContentContainer>
+    <ContentContainer id="home">
       <p>Hello World</p>
       <small>Website in maintenance mode, come back soon!</small>
       <a href="mailto:zach@sneakycrow.io">Email Me</a>
@@ -145,7 +145,12 @@ const Home = () => (
         <Chevron />
       </ScrollDownContainer>
     </ContentContainer>
-    <ContentContainer id="about">Second Content</ContentContainer>
+    <ContentContainer id="about">
+      This will be an about section!
+    </ContentContainer>
+    <ContentContainer id="portfolio">
+      This will be a portfolio section!
+    </ContentContainer>
   </RootContainer>
 );
 

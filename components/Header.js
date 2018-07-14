@@ -1,4 +1,5 @@
 import styled from 'react-emotion';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { pallette, spacing } from '../assets/variables';
 import AdaDadHat from '../assets/images/svg/ada_dad_hat.svg';
 
@@ -56,13 +57,13 @@ const Header = () => (
     <Navigation>
       <NavigationList>
         <li>
-          <a href="/">Home</a>
+          <AnchorLink href="#home">Home</AnchorLink>
         </li>
         <li>
-          <a href="/portfolio">Portfolio</a>
+          <AnchorLink href="#about">About</AnchorLink>
         </li>
         <li>
-          <a href="/blog">Blog</a>
+          <AnchorLink href="#portfolio">Portfolio</AnchorLink>
         </li>
       </NavigationList>
     </Navigation>
