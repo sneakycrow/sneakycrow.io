@@ -1,6 +1,9 @@
 export const pallette = {
   white: '#FFFFFF',
-  black: '#000000'
+  black: '#080705',
+  green: '#44af69',
+  blue: '#01baef',
+  gray: '#515151'
 };
 
 export const spacing = {
