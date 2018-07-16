@@ -8,12 +8,15 @@ import { pallette, spacing } from '../components/variables';
 const ContentContainer = styled('div')`
   display: flex;
   height: 100vh;
-  width: auto;
+  width: 75%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   padding: ${spacing.sm};
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const pulse = keyframes`
@@ -44,9 +47,9 @@ const ScrollDownContainer = styled(AnchorLink)`
 `;
 
 const Bio = styled('p')`
-  max-width: 350px;
   margin: ${spacing.md} 0;
-  line-height: ${spacing.md};
+  font-size: 2em;
+  line-height: 1.5em;
   text-align: justify;
   a {
     padding: 0;
@@ -55,7 +58,6 @@ const Bio = styled('p')`
 `;
 
 const Profile = styled('div')`
-  max-width: 500px;
   display: flex;
 `;
 
