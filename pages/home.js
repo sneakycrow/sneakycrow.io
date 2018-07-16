@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
-import styled, { keyframes } from 'react-emotion';
+import styled, { keyframes, css } from 'react-emotion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Header from '../components/Header';
 import Chevron from '../components/Chevron';
-import { pallette, spacing } from '../assets/variables';
+import { pallette, spacing } from '../components/variables';
 
 const ContentContainer = styled('div')`
   display: flex;
@@ -50,7 +50,25 @@ const Bio = styled('p')`
   text-align: justify;
   a {
     padding: 0;
+    margin: 0 ${spacing.xs};
   }
+`;
+
+const Profile = styled('div')`
+  max-width: 500px;
+  display: flex;
+`;
+
+const ProfilePicture = styled('img')`
+  width: auto;
+  height: 150px;
+  border: 5px solid ${pallette.pink};
+  margin-right: ${spacing.xs};
+`;
+
+const ProfileText = styled('div')`
+  display: flex;
+  flex-direction: column;
 `;
 
 const Home = () => (
@@ -62,18 +80,43 @@ const Home = () => (
       <Bio>
         My name is Zachary E Sohovich. I love to program (and rebuild my website
         often apparently). Right now, this site is being rebuilt with SSR React
-        (NextJS). I am currently a software engineer at
-        <a href="https://isolary.com"> isolary</a>. If you would like to get in
-        touch with me, email me!
+        (NextJS). If you would like to get in touch with me, email me! Currently
+        a software engineer at
+        <a
+          href="https://isolary.com"
+          className={css`
+            &:hover {
+              color: ${pallette.pink};
+            }
+          `}
+        >
+          isolary
+        </a>
       </Bio>
       <a href="mailto:zach@sneakycrow.io">Email Me</a>
       <ScrollDownContainer href="#about">
         Scroll Down
         <Chevron />
       </ScrollDownContainer>
-    </ContentContainer>
+    </ContentContainer>`
     <ContentContainer id="about">
-      This will be an about section!
+      <Profile>
+        <ProfilePicture
+          src="static/zach.jpg"
+          alt="Zachary Sohovich in a pink button 
+            up shirt looking mysteriously at what seems like a corner of the room on the ceiling"
+        />
+        <ProfileText>
+          <p>
+            This is a picture of me. I&#39;m mysteriously looking into a corner.
+            You don&#39;t know what I&#39;m looking at. Honestly, neither do I
+          </p>
+          <p>
+            I&#39;m going to update this with actual information that you care
+            about.
+          </p>
+        </ProfileText>
+      </Profile>
     </ContentContainer>
     <ContentContainer id="portfolio">
       This will be a portfolio section!

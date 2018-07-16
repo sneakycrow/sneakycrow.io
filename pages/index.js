@@ -1,7 +1,7 @@
 import styled, { hydrate, injectGlobal } from 'react-emotion';
 import { lighten } from 'polished';
 import Home from './home';
-import { pallette, spacing } from '../assets/variables';
+import { pallette, spacing } from '../components/variables';
 
 // Adds server generated styles to emotion cache.
 // '__NEXT_DATA__.ids' is set in '_document.js'
@@ -78,6 +78,9 @@ injectGlobal`
   }
   small {
     font-size: 0.65em;
+  }
+  p {
+    margin-bottom: ${spacing.xs};
   }
 `;
 

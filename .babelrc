@@ -15,7 +15,8 @@
           ]
 
         }
-      }
+      },
+      "inline-import-data-uri"
     ]
   ]
 }

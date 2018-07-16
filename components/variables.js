@@ -3,7 +3,9 @@ export const pallette = {
   black: '#080705',
   green: '#44af69',
   blue: '#01baef',
+  pink: '#da667b',
   gray: '#515151',
+  isolary: '#ec5a4f',
   darkGray: '#1E2326'
 };
 

@@ -1,6 +1,6 @@
 import styled from 'react-emotion';
 import { lighten } from 'polished';
-import { pallette } from '../assets/variables';
+import { pallette } from './variables';
 
 const Icon = styled('span')`
   border-style: solid;

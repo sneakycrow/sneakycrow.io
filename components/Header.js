@@ -1,7 +1,7 @@
 import styled from 'react-emotion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { pallette, spacing } from '../assets/variables';
-import AdaDadHat from '../assets/images/svg/ada_dad_hat.svg';
+import AdaDadHat from '../static/ada_dad_hat.svg';
+import { pallette, spacing } from './variables';
 
 const NavigationBar = styled('div')`
   background-color: ${pallette.white};
@@ -53,6 +53,11 @@ const LogoLink = styled('a')`
   &:hover {
     svg {
       border: 5px solid ${pallette.green};
+    }
+  }
+  &:focus {
+    svg {
+      border: 5px solid ${pallette.pink};
     }
   }
 `;
