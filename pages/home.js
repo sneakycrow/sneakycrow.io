@@ -8,14 +8,17 @@ import { pallette, spacing } from '../components/variables';
 const ContentContainer = styled('div')`
   display: flex;
   height: 100vh;
-  width: 75%;
+  width: 100vw;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   padding: ${spacing.sm};
+  > * {
+    max-width: 75%;
+  }
   @media (max-width: 768px) {
-    width: 100%;
+    max-width: 100%;
   }
 `;
 
@@ -50,7 +53,7 @@ const Bio = styled('p')`
   margin: ${spacing.md} 0;
   font-size: 2em;
   line-height: 1.5em;
-  text-align: justify;
+  text-align: center;
   a {
     padding: 0;
     margin: 0 ${spacing.xs};
