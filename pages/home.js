@@ -14,11 +14,15 @@ const ContentContainer = styled('div')`
   justify-content: center;
   position: relative;
   padding: ${spacing.sm};
+  font-size: 2em;
+  flex-wrap: wrap;
   > * {
     max-width: 75%;
   }
   @media (max-width: 768px) {
-    max-width: 100%;
+    max-width: auto;
+    font-size: 1em;
+    padding: 0;
   }
 `;
 
@@ -51,7 +55,6 @@ const ScrollDownContainer = styled(AnchorLink)`
 
 const Bio = styled('p')`
   margin: ${spacing.md} 0;
-  font-size: 2em;
   line-height: 1.5em;
   text-align: center;
   a {
@@ -62,11 +65,12 @@ const Bio = styled('p')`
 
 const Profile = styled('div')`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const ProfilePicture = styled('img')`
   width: auto;
-  height: 150px;
+  height: 250px;
   border: 5px solid ${pallette.pink};
   margin-right: ${spacing.xs};
 `;
