@@ -8,13 +8,13 @@ import { pallette, spacing } from '../components/variables';
 const ContentContainer = styled('div')`
   display: flex;
   height: 100vh;
-  width: 100vw;
+  width: auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   padding: ${spacing.sm};
-  font-size: 2em;
+  font-size: 1.5em;
   flex-wrap: wrap;
   > * {
     max-width: 75%;
@@ -65,7 +65,12 @@ const Bio = styled('p')`
 
 const Profile = styled('div')`
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const ProfilePicture = styled('img')`
@@ -73,6 +78,9 @@ const ProfilePicture = styled('img')`
   height: 250px;
   border: 5px solid ${pallette.pink};
   margin-right: ${spacing.xs};
+  @media (max-width: 768px) {
+    margin-bottom: ${spacing.xs};
+  }
 `;
 
 const ProfileText = styled('div')`
