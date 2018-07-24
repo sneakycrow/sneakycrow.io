@@ -1,7 +1,5 @@
 language: node_js
 node_js:
 - stable
-addons:
-  ssh_known_hosts: "$PROD_HOST"
 script:
 - npm run lint
