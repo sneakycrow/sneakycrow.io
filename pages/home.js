@@ -6,8 +6,6 @@ import Chevron from '../components/Chevron';
 import Profile from '../components/Profile';
 import { pallette, spacing } from '../components/variables';
 
-const owjs = require('overwatch-js');
-
 const ContentContainer = styled('div')`
   display: flex;
   height: 100vh;
@@ -73,11 +71,7 @@ class Home extends Component {
       overwatchRank: ''
     };
   }
-  componentDidMount() {
-    owjs
-      .getAll('psn', 'us', 'xChaozzz')
-      .then(player => this.setState(() => ({ overwatchRank: player.profile.rank })));
-  }
+
   render() {
     return (
       <Fragment>
@@ -86,9 +80,10 @@ class Home extends Component {
           <p>Hello World</p>
           <small>Under Active Maintenance</small>
           <Bio>
-            My name is Zachary E Sohovich. I love to program (and rebuild my website often
-            apparently). Right now, this site is being rebuilt with SSR React (NextJS). If you would
-            like to get in touch with me, email me! Currently a software engineer at
+            My name is Zachary E Sohovich. I love to program (and rebuild my
+            website often apparently). Right now, this site is being rebuilt
+            with SSR React (NextJS). If you would like to get in touch with me,
+            email me! Currently a software engineer at
             <a
               href="https://isolary.com"
               className={css`
@@ -109,7 +104,9 @@ class Home extends Component {
         <ContentContainer id="about">
           <Profile overwatchRank={this.state.overwatchRank} />
         </ContentContainer>
-        <ContentContainer id="portfolio">This will be a portfolio section!</ContentContainer>
+        <ContentContainer id="portfolio">
+          This will be a portfolio section!
+        </ContentContainer>
       </Fragment>
     );
   }
