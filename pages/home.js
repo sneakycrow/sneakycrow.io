@@ -110,6 +110,10 @@ const Home = () => (
           isolary
         </a>
       </Bio>
+      <Bio>
+        My largest knowledge base and experience is in Javascript, Rust, and
+        Python
+      </Bio>
       <a href="mailto:zach@sneakycrow.io">Email Me</a>
       <ScrollDownContainer href="#about">
         Scroll Down
