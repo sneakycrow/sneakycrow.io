@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { lighten } from 'polished';
 import { pallette, spacing } from './variables';
@@ -42,7 +41,7 @@ const ProfileText = styled('div')`
   color: ${pallette.white};
 `;
 
-const Profile = ({ overwatchRank }) => (
+const Profile = () => (
   <Container>
     <PicContainer width="144px">
       <ProfilePic
@@ -52,14 +51,10 @@ const Profile = ({ overwatchRank }) => (
       />
     </PicContainer>
     <ProfileText>
-      Part Engineer, Part Nerd, Part Explorer, all extrordinair
-      {overwatchRank}
+      Still working on trying to figure out how to describe myself without
+      sounding egotistical, but I will be honest, I am awesome.
     </ProfileText>
   </Container>
 );
-
-Profile.propTypes = {
-  overwatchRank: PropTypes.string.isRequired
-};
 
 export default Profile;
