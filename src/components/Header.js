@@ -1,6 +1,7 @@
+import React from 'react';
 import styled from 'react-emotion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import AdaDadHat from '../static/ada_dad_hat.svg';
+import AdaDadHat from '../assets/images/ada_dad_hat.svg';
 import { pallette, spacing } from './variables';
 
 const NavigationBar = styled('div')`

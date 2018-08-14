@@ -1,13 +1,10 @@
-import styled, { hydrate, injectGlobal } from 'react-emotion';
+/* eslint-disable no-unused-expressions */
+import React from 'react';
+import ReactDOM from 'react-dom';
+import styled, { injectGlobal } from 'react-emotion';
 import { lighten } from 'polished';
-import Home from './home';
-import { pallette, spacing } from '../components/variables';
-
-// Adds server generated styles to emotion cache.
-// '__NEXT_DATA__.ids' is set in '_document.js'
-if (typeof window !== 'undefined') {
-  hydrate(window.__NEXT_DATA__.ids);
-}
+import { pallette, spacing } from './components/variables';
+import App from './App';
 
 injectGlobal`
   @font-face {
@@ -90,10 +87,9 @@ const RootContainer = styled('div')`
   background-color: ${pallette.white};
 `;
 
-const App = () => (
+ReactDOM.render(
   <RootContainer>
-    <Home />
-  </RootContainer>
+    <App />
+  </RootContainer>,
+  document.getElementById('root')
 );
-
-export default App;

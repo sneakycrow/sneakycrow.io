@@ -1,5 +1,5 @@
 {
-  "presets": ["next/babel"],
+  "presets": ["env", "airbnb", "react"],
   "plugins": [
     [
       "inline-react-svg",

@@ -1,10 +1,10 @@
-import { Fragment, Component } from 'react';
+import React, { Fragment, Component } from 'react';
 import styled, { keyframes, css } from 'react-emotion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import Header from '../components/Header';
-import Chevron from '../components/Chevron';
-import Profile from '../components/Profile';
-import { pallette, spacing } from '../components/variables';
+import Header from './components/Header';
+import Chevron from './components/Chevron';
+import Profile from './components/Profile';
+import { pallette, spacing } from './components/variables';
 
 const ContentContainer = styled('div')`
   display: flex;

@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'react-emotion';
 import { lighten } from 'polished';
 import { pallette } from './variables';

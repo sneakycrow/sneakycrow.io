@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { lighten } from 'polished';
 import { pallette, spacing } from './variables';
+import me from '../assets/images/zach.jpg';
 
 const Container = styled('div')`
   width: 18rem;
@@ -46,7 +47,7 @@ const Profile = ({ overwatchRank }) => (
     <PicContainer width="144px">
       <ProfilePic
         width="144px"
-        src="/static/zach.jpg"
+        src={me}
         alt="Zachary staring off into a corner. No one knows what he is looking at, including himself"
       />
     </PicContainer>
