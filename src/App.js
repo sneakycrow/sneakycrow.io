@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react';
+import React, { Fragment } from 'react';
 import styled, { keyframes, css } from 'react-emotion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Header from './components/Header';
@@ -64,52 +64,41 @@ const Bio = styled('p')`
   }
 `;
 
-class Home extends Component {
-  constructor() {
-    super();
-    this.state = {
-      overwatchRank: ''
-    };
-  }
+export const App = () => (
+  <Fragment>
+    <Header />
+    <ContentContainer id="home">
+      <p>Hello World</p>
+      <small>Under Active Maintenance</small>
+      <Bio>
+        My name is Zachary E Sohovich. I love to program (and rebuild my website
+        often apparently). Right now, this site is being rebuilt with SSR React
+        (NextJS). If you would like to get in touch with me, email me! Currently
+        a software engineer at
+        <a
+          href="https://isolary.com"
+          className={css`
+            &:hover {
+              color: ${pallette.pink};
+            }
+          `}
+        >
+          isolary
+        </a>
+      </Bio>
+      <a href="mailto:zach@sneakycrow.io">Email Me</a>
+      <ScrollDownContainer href="#about">
+        Scroll Down
+        <Chevron />
+      </ScrollDownContainer>
+    </ContentContainer>
+    <ContentContainer id="about">
+      <Profile />
+    </ContentContainer>
+    <ContentContainer id="portfolio">
+      This will be a portfolio section!
+    </ContentContainer>
+  </Fragment>
+);
 
-  render() {
-    return (
-      <Fragment>
-        <Header />
-        <ContentContainer id="home">
-          <p>Hello World</p>
-          <small>Under Active Maintenance</small>
-          <Bio>
-            My name is Zachary E Sohovich. I love to program (and rebuild my
-            website often apparently). Right now, this site is being rebuilt
-            with SSR React (NextJS). If you would like to get in touch with me,
-            email me! Currently a software engineer at
-            <a
-              href="https://isolary.com"
-              className={css`
-                &:hover {
-                  color: ${pallette.pink};
-                }
-              `}
-            >
-              isolary
-            </a>
-          </Bio>
-          <a href="mailto:zach@sneakycrow.io">Email Me</a>
-          <ScrollDownContainer href="#about">
-            Scroll Down
-            <Chevron />
-          </ScrollDownContainer>
-        </ContentContainer>`
-        <ContentContainer id="about">
-          <Profile overwatchRank={this.state.overwatchRank} />
-        </ContentContainer>
-        <ContentContainer id="portfolio">
-          This will be a portfolio section!
-        </ContentContainer>
-      </Fragment>
-    );
-  }
-}
-
-export default Home;
+export default App;
