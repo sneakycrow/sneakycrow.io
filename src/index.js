@@ -7,14 +7,6 @@ import { pallette, spacing } from './components/variables';
 import App from './App';
 
 injectGlobal`
-  @font-face {
-    font-family: 'Quicksand', sans-serif;
-    src: url('https://fonts.googleapis.com/css?family=Quicksand');
-  }
-  @font-face {
-    font-family: 'Open Sans', sans-serif;
-    src: url('https://fonts.googleapis.com/css?family=Open+Sans');
-  }
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -42,10 +34,8 @@ injectGlobal`
   }
   body {
     line-height: 1;
-    font-family: 'Quicksand', sans-serif;
-  }
-  ol, ul {
-    list-style: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
   }
   blockquote, q {
     quotes: none;
@@ -63,7 +53,8 @@ injectGlobal`
     color: ${lighten(0.3, pallette.gray)};
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
     font-size: 0.75em;
     opacity: 0.75;
     padding: ${spacing.sm};
@@ -78,6 +69,27 @@ injectGlobal`
   }
   p {
     margin-bottom: ${spacing.xs};
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-family: 'Quicksand', sans-serif;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 24px;
+  }
+  h6 {
+    font-size: 20px;
   }
 `;
 

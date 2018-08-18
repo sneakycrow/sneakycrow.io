@@ -40,6 +40,7 @@ const NavigationList = styled('ul')`
     a {
       padding: ${spacing.sm};
       display: block;
+      font-size: 0.5em;
     }
   }
 `;
@@ -85,10 +86,7 @@ const Header = () => (
           <AnchorLink href="#home">Top</AnchorLink>
         </li>
         <li>
-          <AnchorLink href="#about">About</AnchorLink>
-        </li>
-        <li>
-          <AnchorLink href="#portfolio">Portfolio</AnchorLink>
+          <AnchorLink href="#experience">Experience</AnchorLink>
         </li>
       </NavigationList>
     </Navigation>

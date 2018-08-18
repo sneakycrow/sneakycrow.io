@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
-import styled, { keyframes, css } from 'react-emotion';
+import styled, { keyframes } from 'react-emotion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Header from './components/Header';
 import Chevron from './components/Chevron';
 import Profile from './components/Profile';
-import Portfolio from './components/Portfolio';
 import { pallette, spacing } from './components/variables';
 
 const ContentContainer = styled('div')`
@@ -16,7 +15,6 @@ const ContentContainer = styled('div')`
   justify-content: center;
   position: relative;
   padding: ${spacing.sm};
-  font-size: 1.5em;
   flex-wrap: wrap;
   > * {
     max-width: 75%;
@@ -55,49 +53,27 @@ const ScrollDownContainer = styled(AnchorLink)`
   }
 `;
 
-const Bio = styled('p')`
-  margin: ${spacing.md} 0;
-  line-height: 1.5em;
-  text-align: center;
-  a {
-    padding: 0;
-    margin: 0 ${spacing.xs};
-  }
-`;
-
-export const App = () => (
+const App = () => (
   <Fragment>
     <Header />
     <ContentContainer id="home">
-      <p>Hello World</p>
-      <small>Under Active Maintenance</small>
-      <Bio>
-        My name is Zachary E Sohovich. I love to program (and rebuild my website
-        often apparently). Right now, this site is being rebuilt with SSR React
-        (NextJS). If you would like to get in touch with me, email me! Currently
-        a software engineer at
-        <a
-          href="https://isolary.com"
-          className={css`
-            &:hover {
-              color: ${pallette.pink};
-            }
-          `}
-        >
-          isolary
-        </a>
-      </Bio>
+      <h1>Zachary Evan Sohovich</h1>
+      <Profile />
       <a href="mailto:zach@sneakycrow.io">Email Me</a>
-      <ScrollDownContainer href="#about">
+      <ScrollDownContainer href="#experience">
         Scroll Down
         <Chevron />
       </ScrollDownContainer>
     </ContentContainer>
-    <ContentContainer id="about">
-      <Profile />
-    </ContentContainer>
-    <ContentContainer id="portfolio">
-      <Portfolio />
+    <ContentContainer id="experience">
+      <p>
+        I&#39;m going to update this more later, but here&#39;s the key stuff
+        you probably want to know:
+      </p>
+      <ul>
+        <li>Bachelors Degree in CS</li>
+        <li>Strong Languages: JS, Rust, Python</li>
+      </ul>
     </ContentContainer>
   </Fragment>
 );

@@ -26,7 +26,8 @@ class Portfolio extends Component {
   }
 
   render() {
-    console.log(this.state.github);
+    const { github } = this.state; // eslint-disable-line no-unused-vars 
+    // TODO: Use this var
     return <p>This will be the portfolio section</p>;
   }
 }

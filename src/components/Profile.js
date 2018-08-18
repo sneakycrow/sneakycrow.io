@@ -1,21 +1,14 @@
 import React from 'react';
-import styled from 'react-emotion';
-import { lighten } from 'polished';
+import styled, { css } from 'react-emotion';
 import { pallette, spacing } from './variables';
 import me from '../assets/images/zach.jpg';
 
 const Container = styled('div')`
-  width: 18rem;
   display: flex;
   align-items: center;
-  background: linear-gradient(
-    ${lighten(0.1, pallette.green)} 20%,
-    ${pallette.green}
-  );
   padding: ${spacing.sm} ${spacing.md};
   border-radius: 2px;
   min-width: 50%;
-  color: ${pallette.white};
 `;
 
 const PicContainer = styled('div')`
@@ -28,6 +21,15 @@ const PicContainer = styled('div')`
   padding: ${props => props.width / 8};
   border: 2px solid ${pallette.white};
   margin: 0 ${spacing.sm};
+  &::after {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(${pallette.green}, ${pallette.white});
+    margin-top: -150px;
+    height: 150px;
+    width: 100%;
+    content: '';
+  }
 `;
 
 const ProfilePic = styled('img')`
@@ -37,8 +39,12 @@ const ProfilePic = styled('img')`
   width: ${props => props.width};
 `;
 
-const ProfileText = styled('div')`
-  color: ${pallette.white};
+const ProfileText = styled('p')`
+  margin: ${spacing.md} 0;
+  a {
+    padding: 0;
+    margin: 0 ${spacing.xs};
+  }
 `;
 
 const Profile = () => (
@@ -51,8 +57,18 @@ const Profile = () => (
       />
     </PicContainer>
     <ProfileText>
-      Still working on trying to figure out how to describe myself without
-      sounding egotistical, but I will be honest, I am awesome.
+      My name is Zachary Sohovich. I&#39;m a Software Engineer who loves to
+      experiment. I&#39;m currently working at
+      <a
+        href="https://isolary.com"
+        className={css`
+          &:hover {
+            color: ${pallette.pink};
+          }
+        `}
+      >
+        isolary
+      </a>
     </ProfileText>
   </Container>
 );
