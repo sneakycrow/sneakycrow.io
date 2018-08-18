@@ -4,6 +4,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Header from './components/Header';
 import Chevron from './components/Chevron';
 import Profile from './components/Profile';
+import Portfolio from './components/Portfolio';
 import { pallette, spacing } from './components/variables';
 
 const ContentContainer = styled('div')`
@@ -96,7 +97,7 @@ export const App = () => (
       <Profile />
     </ContentContainer>
     <ContentContainer id="portfolio">
-      This will be a portfolio section!
+      <Portfolio />
     </ContentContainer>
   </Fragment>
 );
