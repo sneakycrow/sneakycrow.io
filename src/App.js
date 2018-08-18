@@ -57,7 +57,6 @@ const App = () => (
   <Fragment>
     <Header />
     <ContentContainer id="home">
-      <h1>Zachary Evan Sohovich</h1>
       <Profile />
       <a href="mailto:zach@sneakycrow.io">Email Me</a>
       <ScrollDownContainer href="#experience">
