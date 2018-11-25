@@ -65,3 +65,6 @@ out/
 
 # Travis Encrypted files
 travis_rsa
+
+# OS Created Files
+.DS_Store
