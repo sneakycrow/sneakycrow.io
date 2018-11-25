@@ -71,7 +71,7 @@ const App = () => (
       </p>
       <ul>
         <li>Bachelors Degree in CS</li>
-        <li>Strong Languages: JS, Rust, Python</li>
+        <li>Strong Languages: JS, PHP, Rust, Python</li>
       </ul>
     </ContentContainer>
   </Fragment>
