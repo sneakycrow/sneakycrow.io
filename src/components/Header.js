@@ -88,6 +88,9 @@ const Header = () => (
         <li>
           <AnchorLink href="#experience">Experience</AnchorLink>
         </li>
+        <li>
+          <a href="https://blog.sneakycrow.io/">Blog</a>
+        </li>
       </NavigationList>
     </Navigation>
   </NavigationBar>
