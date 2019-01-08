@@ -23,9 +23,9 @@
     "emotion": "^9.2.4",
     "polished": "^1.9.3",
     "prop-types": "^15.6.2",
-    "react": "^16.4.1",
+    "react": "^16.7.0",
     "react-anchor-link-smooth-scroll": "^1.0.10",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.7.0",
     "react-emotion": "^9.2.4"
   },
   "devDependencies": {
